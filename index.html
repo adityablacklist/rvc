@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./src/components/hero.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/rvc_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RVC</title>
+    <style>
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #root::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('./src/assets/bg_rv.jpg');
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        opacity: 0.25;
+        z-index: -50;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx">
+    </script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "6c2b7c7b-a214-4ddd-b925-c5d1c0e77f0d",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud/",
+      "clientId": "6c2b7c7b-a214-4ddd-b925-c5d1c0e77f0d",
+      "webhookId": "a0a1309c-3cb7-4f1a-b582-6fffe6352465",
+      "closeOnEscape": true, 
+      "useSessionStorage": true,
+      "enablePersistHistory": false,
+      "startNewConvoOnTimeout": true,
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+  </body>
+</html>
